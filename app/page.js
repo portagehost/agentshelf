@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <div className="min-h-screen">
@@ -13,16 +15,16 @@ export default function Home() {
             their business.
           </p>
           <div className="space-x-4">
-            <a
+            <Link
               href="/blog"
               className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600">
               Latest Articles
-            </a>
-            <a
+            </Link>
+            <Link
               href="/glossary"
               className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600">
               AI Glossary
-            </a>
+            </Link>
           </div>
         </div>
       </section>
