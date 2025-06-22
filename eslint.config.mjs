@@ -9,6 +9,14 @@ const compat = new FlatCompat({
   baseDirectory: __dirname,
 });
 
-const eslintConfig = [...compat.extends("next/core-web-vitals")];
+const eslintConfig = [
+  ...compat.extends("next/core-web-vitals", "next/typescript"),
+  {
+    rules: {
+      // Allow contractions and apostrophes in JSX
+      "react/no-unescaped-entities": ["error", { forbid: [">", "}"] }],
+    },
+  },
+];
 
 export default eslintConfig;
