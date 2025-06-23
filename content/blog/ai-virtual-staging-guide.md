@@ -1,10 +1,14 @@
 ---
 title: "The Complete Guide to AI Virtual Staging for Real Estate"
-date: "2025-06-21"
+date: "June 21, 2025"
 excerpt: "Learn how AI-powered virtual staging can transform empty properties and increase buyer interest while saving time and money."
 tags: ["virtual-staging", "ai-tools", "marketing"]
 category: "Tools"
 featured: false
+skillLevel: "Intermediate"
+image: "https://picsum.photos/400/200?random=1"
+authorName: "Jason Hernandez"
+authorAvatar: "https://picsum.photos/50/50?random=100"
 ---
 
 Virtual staging has revolutionized how real estate professionals market properties. With AI-powered tools, you can now transform empty spaces into beautifully furnished homes in minutes, not days.

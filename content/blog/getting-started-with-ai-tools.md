@@ -1,10 +1,14 @@
 ---
-title: "Getting Started with AI Tools for Real Estate Agents"
-date: "2025-06-22"
-excerpt: "A beginner's guide to implementing AI tools in your real estate practice, from lead generation to client communication."
-tags: ["beginner", "ai-tools", "getting-started"]
-category: "Getting Started"
+title: "Getting Started with AI Tools for Real Estate"
+date: "June 20, 2025"
+excerpt: "A beginner's guide to incorporating artificial intelligence tools into your real estate business workflow."
+tags: ["ai-tools", "getting-started", "productivity"]
+category: "Fundamentals"
 featured: true
+skillLevel: "Beginner"
+image: "https://picsum.photos/400/200?random=2"
+authorName: "Jason Hernandez"
+authorAvatar: "https://picsum.photos/50/50?random=101"
 ---
 
 # Getting Started with AI Tools for Real Estate Agents

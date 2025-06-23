@@ -1,42 +1,22 @@
+import { glossaryData } from "../data/glossaryData";
+import GlossaryContent from "../components/GlossaryContent";
+
 export default function Glossary() {
   return (
-    <div className="min-h-screen p-8">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold mb-8">AI Glossary for Real Estate</h1>
-        <p className="text-lg text-gray-600 mb-8">
-          Essential AI and technology terms that every real estate professional
-          should know.
-        </p>
-
-        <div className="space-y-6">
-          {/* Sample glossary entries */}
-          <div className="border-l-4 border-blue-500 pl-6">
-            <h3 className="text-xl font-semibold">
-              Artificial Intelligence (AI)
-            </h3>
-            <p className="text-gray-600 mt-2">
-              Technology that enables machines to perform tasks that typically
-              require human intelligence, such as learning, reasoning, and
-              problem-solving.
-            </p>
-          </div>
-
-          <div className="border-l-4 border-blue-500 pl-6">
-            <h3 className="text-xl font-semibold">Machine Learning (ML)</h3>
-            <p className="text-gray-600 mt-2">
-              A subset of AI that allows computers to learn and improve from
-              data without being explicitly programmed for each task.
-            </p>
-          </div>
-
-          <div className="border-l-4 border-blue-500 pl-6">
-            <h3 className="text-xl font-semibold">Virtual Staging</h3>
-            <p className="text-gray-600 mt-2">
-              Using AI and digital technology to add furniture and décor to
-              photos of empty properties, helping buyers visualize the space.
-            </p>
-          </div>
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <div className="bg-blue-900 text-white py-20">
+        <div className="max-w-3xl mx-auto text-center px-8">
+          <h1 className="text-4xl font-bold mb-4">AI Glossary</h1>
+          <p className="text-xl">
+            Your comprehensive guide to understanding AI terminology
+          </p>
         </div>
+      </div>
+
+      {/* Main Content */}
+      <div className="max-w-4xl mx-auto px-8 py-12">
+        <GlossaryContent glossaryData={glossaryData} />
       </div>
     </div>
   );

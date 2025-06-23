@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-blue-600 text-white py-20">
+      <section className="bg-blue-900 text-white py-20">
         <div className="max-w-6xl mx-auto px-8 text-center">
           <h1 className="text-5xl font-bold mb-6">
             AI Tools for Real Estate Professionals
@@ -17,12 +17,12 @@ export default function Home() {
           <div className="space-x-4">
             <Link
               href="/blog"
-              className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600">
+              className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900">
               Latest Articles
             </Link>
             <Link
               href="/glossary"
-              className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600">
+              className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900">
               AI Glossary
             </Link>
           </div>
