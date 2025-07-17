@@ -86,3 +86,34 @@ body {
   border-radius: 0.25rem;
   font-size: 0.875rem;
 }
+
+.prose a {
+  color: #3b82f6;
+  text-decoration: underline;
+}
+
+.prose a:hover {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+
+/* Custom blue color to match your desired shade */
+.bg-custom-blue {
+  background-color: #1e3a8a; /* Adjust this hex code to match your exact blue */
+}
+
+.text-custom-blue {
+  color: #1e3a8a;
+}
+
+.border-custom-blue {
+  border-color: #1e3a8a;
+}
+
+.hover\:bg-custom-blue:hover {
+  background-color: #1e3a8a;
+}
+
+.hover\:text-custom-blue:hover {
+  color: #1e3a8a;
+}

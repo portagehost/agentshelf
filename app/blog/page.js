@@ -1,25 +1,55 @@
+import Link from "next/link";
 import { getAllPosts } from "../lib/posts";
-import BlogContent from "../components/BlogContent";
 
 export default function Blog() {
   const posts = getAllPosts();
 
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <div className="bg-blue-900 text-white py-20">
-        <div className="max-w-3xl mx-auto text-center px-8">
-          <h1 className="text-4xl font-bold mb-4">AI for Real Estate Blog</h1>
-          <p className="text-xl">
-            The latest guides, tutorials, and insights on using AI to transform
-            your real estate business
-          </p>
-        </div>
-      </div>
+    <div className="min-h-screen p-8">
+      <div className="max-w-4xl mx-auto">
+        <h1 className="text-4xl font-bold mb-8">Blog</h1>
+        <p className="text-lg text-gray-600 mb-8">
+          Latest news, insights, and quick tips about AI in real estate.
+        </p>
 
-      {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-8 py-12">
-        <BlogContent posts={posts} />
+        {posts.length > 0 ? (
+          <div className="space-y-8">
+            {posts.map((post) => (
+              <article
+                key={post.slug}
+                className="border-b border-gray-200 pb-8">
+                <h2 className="text-2xl font-bold mb-3">
+                  <Link
+                    href={`/blog/${post.slug}`}
+                    className="text-blue-600 hover:text-blue-800">
+                    {post.title}
+                  </Link>
+                </h2>
+                <div className="text-gray-500 text-sm mb-3">
+                  {post.date} • {post.category}
+                </div>
+                <p className="text-gray-700 mb-4">{post.excerpt}</p>
+                <div className="flex flex-wrap gap-2">
+                  {post.tags &&
+                    post.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">
+                        {tag}
+                      </span>
+                    ))}
+                </div>
+              </article>
+            ))}
+          </div>
+        ) : (
+          <div className="bg-gray-100 p-6 rounded-lg">
+            <p className="text-gray-500">
+              Coming soon! This section will feature blog posts with news, quick
+              tips, and industry insights.
+            </p>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -1,76 +1,53 @@
-"use client";
 import Link from "next/link";
-import { BotMessageSquare, Menu, X } from "lucide-react";
-import { useState, useEffect } from "react";
-
+import Image from "next/image";
 export default function Navigation() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "Blog", path: "/blog" },
-    { name: "Glossary", path: "/glossary" },
-  ];
-
   return (
-    <nav
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-blue-900 shadow-lg py-2" : "bg-blue-900 py-4"
-      }`}>
-      <div className="max-w-6xl mx-auto flex justify-between items-center px-4">
-        <Link
-          href="/"
-          className="text-2xl font-bold hover:text-blue-200 flex items-center space-x-2">
-          <BotMessageSquare size={28} className="text-white" />
-          <span className="text-white">Agent Shelf</span>
+    <header className="bg-gradient-to-b from-blue-100 to-white shadow-md">
+      {/* Logo Section */}
+      <div className="text-center py-3">
+        <Link href="/" className="inline-block">
+          <div className="overflow-hidden h-22 flex items-center justify-center mb-2">
+            <Image
+              src="/agentshelf-logo.png"
+              alt="AgentShelf"
+              width={300}
+              height={60}
+              className="object-contain"
+            />
+          </div>
+          <p className="text-xl text-gray-800 font-bold tracking-wide">
+            AI Tools for Real Estate Agents
+          </p>
         </Link>
-
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-6">
-          {navLinks.map((link) => (
-            <Link
-              key={link.path}
-              href={link.path}
-              className="text-white hover:text-blue-200">
-              {link.name}
-            </Link>
-          ))}
-        </div>
-
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden text-white"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}>
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
       </div>
 
-      {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="md:hidden mt-4 mx-4">
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                href={link.path}
-                className="block px-4 py-3 text-gray-700 hover:bg-gray-50 border-b border-gray-100 last:border-b-0"
-                onClick={() => setIsMenuOpen(false)}>
-                {link.name}
-              </Link>
-            ))}
+      {/* Navigation Tabs */}
+      <nav className="border-t border-gray-200">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex justify-center space-x-8">
+            <Link
+              href="/guides"
+              className="px-6 py-4 text-gray-700 hover:text-blue-600 hover:border-b-2 hover:border-blue-600 font-medium">
+              Guides
+            </Link>
+            <Link
+              href="/prompts"
+              className="px-6 py-4 text-gray-700 hover:text-blue-600 hover:border-b-2 hover:border-blue-600 font-medium">
+              Prompts
+            </Link>
+            <Link
+              href="/blog"
+              className="px-6 py-4 text-gray-700 hover:text-blue-600 hover:border-b-2 hover:border-blue-600 font-medium">
+              Blog
+            </Link>
+            <Link
+              href="/glossary"
+              className="px-6 py-4 text-gray-700 hover:text-blue-600 hover:border-b-2 hover:border-blue-600 font-medium">
+              Glossary
+            </Link>
           </div>
         </div>
-      )}
-    </nav>
+      </nav>
+    </header>
   );
 }
