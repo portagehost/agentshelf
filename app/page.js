@@ -17,7 +17,7 @@ export default function Home() {
                 that help real estate agents work smarter, serve clients better,
                 and grow their business.
               </p>
-              <div className="space-y-4">
+              <div className="space-y-4 text-center">
                 <Link
                   href="/guides"
                   className="bg-white text-custom-blue px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 inline-block mr-8">
