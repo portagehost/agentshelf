@@ -20,12 +20,12 @@ export default function Home() {
               <div className="space-y-4">
                 <Link
                   href="/guides"
-                  className="bg-white text-custom-blue px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 inline-block mr-4">
-                  Latest Guides
+                  className="bg-white text-custom-blue px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 inline-block mr-8">
+                  Guides
                 </Link>
                 <Link
                   href="/prompts"
-                  className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-custom-blue inline-block">
+                  className="bg-white text-custom-blue px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 inline-block">
                   Prompts
                 </Link>
               </div>
