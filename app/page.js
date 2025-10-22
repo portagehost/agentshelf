@@ -67,7 +67,7 @@ export default function Home() {
 
               <div>
                 <a
-                  href="mailto:your.email@example.com"
+                  href="mailto:jason@crescenttitle.com"
                   className="bg-white text-custom-blue px-6 py-3 rounded-lg font-medium hover:bg-blue-50">
                   Get In Touch
                 </a>
